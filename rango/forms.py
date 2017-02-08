@@ -20,7 +20,7 @@ class PageForm(forms.ModelForm):
         model = Page
         exclude = ('category',)
 
-    def clean(selfself):
+    def clean(self):
         cleaned_data = self.cleaned_data
         url = cleaned_data.get('url')
 

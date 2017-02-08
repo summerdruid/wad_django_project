@@ -58,7 +58,7 @@ def add_category(request):
 
 def add_page(request, category_name_slug):
     try:
-        category = Category.objects.get(slug=category_name_slug)
+        category = Category.objects.get(slug = category_name_slug)
     except Category.DoesNotExist:
         category = None
 
@@ -67,11 +67,11 @@ def add_page(request, category_name_slug):
         form = PageForm(request.POST)
         if form.is_valid():
             if category:
-                page = form.save(commit=False)
+                page = form.save(commit = False)
                 page.category = category
                 page.views = 0
                 page.save()
-            return show_category(request, category_name_slug)
+                return show_category(request, category_name_slug)
         else:
             print(form.errors)
 
