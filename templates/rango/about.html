@@ -13,4 +13,11 @@
 	</div>
 	<img src = "{% static "images/django.jpg" %}" alt = "Picture of Django" />
 	<img src = "{{ MEDIA_URL }}cat.jpg" alt = "Picture of a cat">
+	<br />
+	You have visited this site {{ visits }} 
+	{% if visits > 1 %}
+		times.
+	{% else %}
+		time.
+	{% endif %}
 {% endblock %}
