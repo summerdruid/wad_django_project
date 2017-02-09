@@ -128,3 +128,7 @@ STATIC_URL = '/static/'
 
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/meia/'
+
+# Login URL for redirecting
+
+LOGIN_URL = '/rango/login/'
